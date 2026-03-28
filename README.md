@@ -7,6 +7,7 @@ DocManager is a Streamlit-based web application designed for people who have hun
 
 Instead of digging through Windows Explorer or Mac Finder, DocManager indexes your files into a local SQLite database, allowing you to search by name, date, or custom tags instantly.
 
+
 ✨ Key Features
 Centralized Search: Find any PDF by typing a keyword, even if the file is buried 5 folders deep.
 
