@@ -16,6 +16,7 @@ Visual Previews: See a thumbnail of the PDF before you open it.
 
 One-Click Access: Open the file directly from the Streamlit interface.
 
+
 🛠 How it Works
 Index: Run the indexing script to scan your selected folders.
 
