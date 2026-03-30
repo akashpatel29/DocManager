@@ -1,30 +1,87 @@
-# DocManager
+<div align="center">
+  <h1>🗂️ Smart PDF Document Manager</h1>
+  <p>A streamlined, local document management utility designed for uploading, organizing, tracking, and reading lecture notes and PDF files seamlessly in your browser.</p>
+</div>
 
-A streamlined local document management utility designed for organizing, tagging, and tracking lecture notes and files.
+---
 
+## 📖 Overview
 
-📂 DocManager: The "Find My PDF" Assistant
+**DocManager** is a Streamlit-based web application designed for students and professionals who have hundreds of PDF files and need a centralized place to index and read them. 
 
-DocManager is a Streamlit-based web application designed for people who have hundreds of PDF files scattered across their computer and can never remember which folder they are in.
+Instead of digging through messy folders, DocManager allows you to **upload PDFs**, instantly **extract metadata**, automatically generate **visual thumbnails**, and even read your documents page-by-page directly inside the app with integrated **progress analytics**.
 
-Instead of digging through Windows Explorer or Mac Finder, DocManager indexes your files into a local SQLite database, allowing you to search by name, date, or custom tags instantly.
+## ✨ Key Features
 
+- **Centralized Uploads**: Securely upload your PDFs with custom tags, descriptions, and lecture dates.
+- **In-App Reader Mode**: Automatically converts PDF pages to high-quality images allowing you to read them directly inside the Streamlit interface without external viewers.
+- **Smart Analytics**: Tracks your reading progress! See exactly which pages you've read, your total completion percentage per document, and daily app visits.
+- **Powerful Search**: Instantly filter through your local SQLite database by custom tags or lecture dates.
+- **Visual Previews**: Automatically generates a thumbnail of the PDF's first page upon upload.
+- **Admin Controls**: Securely wipe the database and clean up storage with password-protected admin actions.
 
-✨ Key Features
-Centralized Search: Find any PDF by typing a keyword, even if the file is buried 5 folders deep.
+## 🛠 Tech Stack
 
-Smart Metadata: Track lecture_date, tags, and total_pages for every document.
+- **Frontend/UI**: [Streamlit](https://streamlit.io/)
+- **Backend/Logic**: Python 3
+- **PDF Processing**: `PyMuPDF` (extracting pages & thumbnails)
+- **Database**: SQLite3 (built-in, zero configuration required)
+- **Environment Management**: `uv` & `python-dotenv`
 
-Visual Previews: See a thumbnail of the PDF before you open it.
+## 🚀 Installation & Setup
 
-One-Click Access: Open the file directly from the Streamlit interface.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/akashpatel29/DocManager.git
+   cd DocManager
+   ```
 
+2. **Set up the virtual environment:**
+   This project uses `uv` for lightning-fast dependency management.
+   ```bash
+   uv venv
+   source .venv/bin/activate
+   uv pip sync requirements.txt
+   ```
+   *(Alternatively, use standard `pip install -r requirements.txt`)*
 
-🛠 How it Works
-Index: Run the indexing script to scan your selected folders.
+3. **Configure Environment Variables:**
+   Create a `.env` file in the root directory for the Admin dashboard:
+   ```ini
+   ADMIN_PASSWORD=your_secure_password_here
+   ```
 
-Store: Metadata and file paths are saved into a lightweight SQLite database.
+4. **Run the Application:**
+   ```bash
+   streamlit run app/main.py
+   ```
+   *The application will automatically initialize the SQLite database (`data/documents.db`) and missing storage directories on its first run.*
 
-Search: Use the Streamlit sidebar to filter by category or date.
+## 📂 Project Structure
 
-Retrieve: View the document details and path immediately.
+```text
+DocManager/
+├── app/
+│   └── main.py              # Main Streamlit UI/Dashboard entry point
+├── core/
+│   ├── analytics.py         # Tracks page views & app visits
+│   ├── file_manager.py      # Handles saving PDFs physically
+│   ├── models.py            # Document OOP Models
+│   ├── reader.py            # PDF-to-Image renderer
+│   ├── services.py          # Core logic connecting UI & Repo
+│   └── thumbnails.py        # Generates front-page cover images
+├── data/                    # Contains the SQLite DB (auto-generated)
+├── db/
+│   ├── database.py          # SQLite connection and schema setup
+│   └── repository.py        # SQL commands (Insert, Search, Fetch)
+├── storage/                 # Physical file storage (auto-generated)
+│   ├── pdfs/                # Saved PDF files & extracted pages
+│   └── thumbnails/          # Cover images
+└── pyproject.toml           # Project dependencies
+```
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/akashpatel29/DocManager/issues).
+
+---
+*Built with ❤️ using Python & Streamlit.*
