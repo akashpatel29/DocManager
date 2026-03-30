@@ -4,6 +4,7 @@ A streamlined local document management utility designed for organizing, tagging
 
 
 📂 DocManager: The "Find My PDF" Assistant
+
 DocManager is a Streamlit-based web application designed for people who have hundreds of PDF files scattered across their computer and can never remember which folder they are in.
 
 Instead of digging through Windows Explorer or Mac Finder, DocManager indexes your files into a local SQLite database, allowing you to search by name, date, or custom tags instantly.
