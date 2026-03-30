@@ -3,14 +3,15 @@ import os
 
 DB_PATH = os.path.join("data", "documents.db")
 
-def get_db_connection():
+def get_connection():
+    os.makedirs("data", exist_ok=True)
     return sqlite3.connect(DB_PATH)
 
-def initialize_database():
-    conn = get_db_connection()
+def init_db():
+    conn = get_connection()
     cursor = conn.cursor()
 
-    # Create the documents table if it doesn't exist
+    # Document table - Schema
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS documents (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -25,6 +26,25 @@ def initialize_database():
         )
     """
     )
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS page_visits (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        document_id INTEGER,
+        page_number INTEGER,
+        timestamp TEXT
+    )
+    """)
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS app_visits (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        event_type TEXT,
+        timestamp TEXT
+    )
+    """)
+
+
     conn.commit()
-    print("Database initialized successfully.")
+    # print("DB operation successfull.")
     conn.close()
