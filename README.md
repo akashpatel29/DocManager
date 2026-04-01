@@ -5,7 +5,7 @@
 
 ---
 
-## 📖 Overview
+## 📖 Overview:
 
 **DocManager** is a Streamlit-based web application designed for students and professionals who have hundreds of PDF files and need a centralized place to index and read them. 
 
