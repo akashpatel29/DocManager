@@ -11,7 +11,7 @@
 
 Instead of digging through messy folders, DocManager allows you to **upload PDFs**, instantly **extract metadata**, automatically generate **visual thumbnails**, and even read your documents page-by-page directly inside the app with integrated **progress analytics**.
 
-## ✨ Key Features
+## ✨ Key Features:
 
 - **Centralized Uploads**: Securely upload your PDFs with custom tags, descriptions, and lecture dates.
 - **In-App Reader Mode**: Automatically converts PDF pages to high-quality images allowing you to read them directly inside the Streamlit interface without external viewers.
