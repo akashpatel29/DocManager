@@ -20,7 +20,7 @@ Instead of digging through messy folders, DocManager allows you to **upload PDFs
 - **Visual Previews**: Automatically generates a thumbnail of the PDF's first page upon upload.
 - **Admin Controls**: Securely wipe the database and clean up storage with password-protected admin actions.
 
-## 🛠 Tech Stack
+## 🛠 Tech Stack:
 
 - **Frontend/UI**: [Streamlit](https://streamlit.io/)
 - **Backend/Logic**: Python 3
