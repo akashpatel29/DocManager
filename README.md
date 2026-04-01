@@ -28,7 +28,7 @@ Instead of digging through messy folders, DocManager allows you to **upload PDFs
 - **Database**: SQLite3 (built-in, zero configuration required)
 - **Environment Management**: `uv` & `python-dotenv`
 
-## 🚀 Installation & Setup
+## 🚀 Installation & Setup:
 
 1. **Clone the repository:**
    ```bash
