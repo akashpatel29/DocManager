@@ -57,7 +57,7 @@ Instead of digging through messy folders, DocManager allows you to **upload PDFs
    ```
    *The application will automatically initialize the SQLite database (`data/documents.db`) and missing storage directories on its first run.*
 
-## 📂 Project Structure
+## 📂 Project Structure:
 
 ```text
 DocManager/
