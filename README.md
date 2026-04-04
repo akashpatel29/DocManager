@@ -3,7 +3,7 @@
   <p>A streamlined, local document management utility designed for uploading, organizing, tracking, and reading lecture notes and PDF files seamlessly in your browser.</p>
 </div>
 
----
+----
 
 ## 📖 Overview:
 
