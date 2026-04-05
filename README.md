@@ -48,7 +48,7 @@ Instead of digging through messy folders, DocManager allows you to **upload PDFs
 3. **Configure Environment Variables:**
    Create a `.env` file in the root directory for the Admin dashboard:
    ```ini
-   ADMIN_PASSWORD=your_secure_password_here
+   ADMIN_PASSWORD= your_secure_password_here
    ```
 
 4. **Run the Application:**
