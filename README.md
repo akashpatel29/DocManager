@@ -83,5 +83,5 @@ DocManager/
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/akashpatel29/DocManager/issues).
 
----
+----
 *Built with ❤️ using Python & Streamlit.*
